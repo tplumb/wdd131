@@ -1,3 +1,11 @@
+:root {
+    --primary-color: #425B78;
+    --secondary-color: #1B263B;
+    --accent-color: #FFC107;
+    --background-color: #778DA9;
+    --text-color: #E0E1DD;
+    --footer-bg: #0D1B2A;
+}
 
 nav {
     display: flex;
@@ -7,21 +15,26 @@ nav {
     max-width: auto;
 }
 nav a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
 }
 nav a:hover {
-    text-decoration: overline;
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
 }
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--background-color);
 }
 header {
     grid-area: header;
-    background-color: rgb(186, 197, 232);
+    background-color: var(--secondary-color);
     padding: 15px;
+}
+header h1 {
+    color: var(--text-color);
 }
 main {
     grid-area:main;
@@ -32,7 +45,18 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 25px;
 }
+footer {
+    background-color: var(--footer-bg);
+    color: #fff;
+    padding: 25px;
+}
+footer a:hover {
+    color: var(--accent-color);
+}
 
+h1, h2, h3 {
+    color: var(--primary-color);
+}
 .card {
     background-color: rgb(255, 255, 255);
     padding: 15px;
