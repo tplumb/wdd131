@@ -8,8 +8,11 @@ function renderTasks(tasks) {
 
 function newTask() {
   // get the value entered into the #todo input
+  const task = document.querySelector("todo").value;
   // add it to our arrays tasks
+  tasks.push ({ detail: task, completed: false});
   // render out the list
+  renderTasks(tasks);
 }
 
 function removeTask(taskElement) {
@@ -17,8 +20,7 @@ function removeTask(taskElement) {
   // Notice also how we are using taskElement instead of document as our starting point?
   // This will restrict our search to the element instead of searching the whole document.
   tasks = tasks.filter(
-    (task) => task.detail != taskElement.querySelector('p').innerText
-  );
+    (task) => task.detail != taskElement.querySelector('p').innerText);
 
   // this line removes the HTML element from the DOM
   taskElement.remove();
@@ -49,5 +51,6 @@ function manageTasks(event) {
 }
 
 // Add your event listeners here
+document.querySelector("submitTask").addEventListener("click", newTask);
 // We need to attach listeners to the submit button and the list. Listen for a click, 
 // call the 'newTask' function on submit and call the 'manageTasks' function if either of the icons are clicked in the list of tasks.
