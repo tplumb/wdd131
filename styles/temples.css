@@ -1,0 +1,28 @@
+.photo-grid {
+    display: grid ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+.photo-grid img {
+    display: grid;
+    width: 100%;
+    height: auto;
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+}
+nav a {
+    display: block;
+    color: steelblue;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: larger;
+}
+nav a:hover {
+    background-color: steelblue;
+    color: white;
+}
+

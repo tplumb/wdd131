@@ -1,0 +1,6 @@
+@media screen and (max-width: 600px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+    }
+  }
