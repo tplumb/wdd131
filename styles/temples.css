@@ -1,6 +1,37 @@
 * {
     max-width: 1200px;
 }
+:root {
+    --primary-color: #0fa3b1;
+    --secondary-color: #b5e2fa;
+    --text-color: black;
+    --accent-color: #f7a072;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 5px;
+    padding: 0%;
+    background-color: var(--secondary-color);
+}
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+.ham-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: fit-content;
+    height: auto;
+}
 .photo-grid {
     display: grid ;
     grid-template-columns: repeat(3, 1fr);
@@ -15,18 +46,19 @@
 nav ul {
     display: flex;
     flex-direction: column;
+    background-color: var(--accent-color);
 }
 nav a {
     display: block;
-    color: steelblue;
+    color: var(--text-color);
     text-align: center;
     padding: 5px;
     text-decoration: none;
     font-size: larger;
 }
 nav a:hover {
-    background-color: steelblue;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
 main {
     max-width: 950px;
