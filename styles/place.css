@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 10px;
+}
+header {
+    text-align: center;
+    border: 2px dashed black;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.data-part, .weather-part {
+    width: 20%;
+    border: 2px dashed black;
+    padding: 10px;
+}
+.images-part {
+    width: 50%;
+    border: 1px solid black;
+}
+.images-part img {
+    max-width: 100%;
+    height: auto;
+}
+.data-part h2, .weather-part h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.weather-img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 0 auto 10px;
+}
+footer {
+    text-align: center;
+    border-top: 1px solid black;
+    padding: 5px;
+    font-size: .5 rem;
+}
+
+/* All of the above was for normal view. Following should switch for mobile 
+based on max width of screen. Allegedly. */
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+    .content {
+        display: block;
+    }
+    .data-part, .weather-part {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .images-part {
+        width: 100%;
+    }
+    ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    footer {
+        font-size: .5rem;
+    }
+}
